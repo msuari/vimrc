@@ -3,11 +3,13 @@ Plug 'morhetz/gruvbox'
 Plug 'myusuf3/numbers.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'zxqfl/tabnine-vim'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " Productivity plugins
 Plug 'tpope/vim-commentary'
+Plug 'davidhalter/jedi-vim'
 " Plug 'ervandew/supertab'
 " let g:SuperTabDefaultCompletionType = "context"
 " let g:SuperTabClosePreviewOnPopupClose = 1
@@ -42,6 +44,10 @@ Plug 'pearofducks/ansible-vim'
 
 " Distraction-free writing
 Plug 'junegunn/goyo.vim'
+
+" Black formatting
+Plug 'psf/black'
+let g:black_virtualenv="~/.vim_black"
 
 " Others
 let g:netrw_list_hide= netrw_gitignore#Hide().'.*\.swp$'.'.git/'

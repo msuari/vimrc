@@ -173,6 +173,9 @@ map 0 ^
 " imap jk <Esc>
 "}}}
 
+" Search engine word
+nnoremap <Leader>k :Ack! "<cword>" <CR>
+
 "{{{ ======= Highlights =======
 " Cursor Highlights
 highlight clear CursorLine SpellBad Cursor

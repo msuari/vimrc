@@ -156,8 +156,8 @@ if vimpureta
 endif
 
 " \p \N to get pdb break points
-nnoremap <leader>p Oimport pudb; pudb.set_trace()<Esc>       
-nnoremap <leader>d Oimport json; print json.dumps(, indent=4)<Esc>       
+nnoremap <leader>p Oimport pudb; pudb.set_trace()<Esc>
+nnoremap <leader>d Oimport json; print json.dumps(, indent=4)<Esc>
 nnoremap <leader>N Ofrom nose.tools import set_trace; set_trace()<Esc>
 "
 " Smart way to move between windows

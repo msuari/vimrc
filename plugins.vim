@@ -4,6 +4,7 @@ Plug 'myusuf3/numbers.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'zxqfl/tabnine-vim'
+Plug 'rking/ag.vim'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 

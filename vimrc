@@ -185,7 +185,7 @@ highlight Cursor ctermbg=235
 
 " Highlight after the 80th column - this line should be highlighted after the character defined below
 highlight clear OverLength
-highlight OverLength ctermbg=88 ctermfg=white guibg=#592929
+highlight OverLength ctermbg=80 ctermfg=white guibg=#592929
 
 " <- Highlight non-ascii characters
 highlight nonascii guibg=#B398CC ctermbg=54
@@ -235,6 +235,9 @@ autocmd FileType rust match OverLength /\%80v.\+/
 " Highlight after 80th character
 autocmd FileType vim match OverLength /\%80v.\+/
 
+" ===== Black =====
+" Define line length to 80
+let g:black_linelength=80
+
 "}}}
 "
-

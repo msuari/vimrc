@@ -3,7 +3,9 @@ Plug 'morhetz/gruvbox'
 Plug 'myusuf3/numbers.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'zxqfl/tabnine-vim'
+
+" Autocomplete
+" Plug 'zxqfl/tabnine-vim'
 Plug 'rking/ag.vim'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -26,6 +28,18 @@ nnoremap <C-p> :Files<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>a :Ag<CR>
 
+" Text Search Plugin
+Plug 'mileszs/ack.vim'
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" File system explorer
+Plug 'preservim/nerdtree'
+nnoremap <C-n> :NERDTreeToggle<CR>
+
 " Git plugins
 Plug 'tpope/vim-fugitive'
 " Plug 'jreybert/vimagit'
@@ -46,9 +60,10 @@ Plug 'pearofducks/ansible-vim'
 " Distraction-free writing
 Plug 'junegunn/goyo.vim'
 
-" Black formatting
-Plug 'psf/black'
+" Formatting
+Plug 'psf/black', { 'tag': '19.10b0' }
 let g:black_virtualenv="~/.vim_black"
+
 
 " Others
 let g:netrw_list_hide= netrw_gitignore#Hide().'.*\.swp$'.'.git/'
